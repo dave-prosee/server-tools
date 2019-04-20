@@ -66,7 +66,7 @@
 
 
     <menuitem id="sql_export_menu" name="Sql Export"
-        parent="base.menu_reporting_dashboard" sequence="80"/>
+        parent="base.menu_board_root" sequence="800"/>
 
     <menuitem id="sql_export_menu_view" name="Sql Export" parent="sql_export_menu" action="sql_export_tree_action" sequence="1"/>
 
