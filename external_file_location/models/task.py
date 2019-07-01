@@ -218,10 +218,13 @@ class Task(models.Model):
                                     conn.remove(full_path + '.md5')
                         except Exception, e:
                             _logger.error('Error importing file %s '
-                                          'from %s: %s',
+                                          'from %s: %s or '
+                                          'error on after_import action using full_path %s and new_full_path %s',
                                           file_name,
                                           self.filepath,
-                                          e)
+                                          e,
+                                          full_path, 
+                                          new_full_path)
 
                             continue
                             # move on to process other files
